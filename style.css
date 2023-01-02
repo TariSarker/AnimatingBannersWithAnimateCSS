@@ -1,3 +1,87 @@
-.discountContainer {
-    background-color: red;
+body {
+    padding: 20px;
+  }
+
+.h2DiscountStyles {
+    margin: 0 auto;
+    max-width: 300px;
+    border: solid 2px #ccc;
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
 }
+
+#Overflow {
+    overflow-wrap: break-word;
+    hyphens: auto;
+    /* Wrapping container around text: https://www.educative.io/answers/how-to-wrap-text-using-css */
+  }
+
+  .discountContainer {
+    width: inherit;
+    background-color: #cc0e0e;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Bodoni Moda', serif;
+
+}
+
+.h2BarberStyles {
+    max-width: 700px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+.barbershopContainer {
+    color: lightcoral;
+    font-family: 'Teko', sans-serif;
+    padding: 15px;
+    height: 50px;
+    border: lightblue 8px solid;
+    border-right: lightblue 15px solid;
+    border-left: lightblue 15px solid;
+}
+
+.barberInnerContainer {
+    background-color: whitesmoke;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.barberOuterBorder {
+    background-color: lightblue;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box {
+    --size: 50px;
+    --p: 25px;
+    --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+    
+    height: 200px;
+  
+    -webkit-mask:
+      radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))),blue 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+      radial-gradient(var(--R) at 50% calc(100% + var(--p)),#0000 99%,red 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+    background:linear-gradient(90deg,red,blue);  
+    border: none;
+  }
+
+  .box2 {
+    --size: 50px;
+    --p: 25px;
+    --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+    
+    height: 200px;
+  
+    -webkit-mask:
+      radial-gradient(var(--R) at 50% calc(50% - (var(--size) + var(--p))),blue 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+      radial-gradient(var(--R) at 50% calc(50% + var(--p)),#0000 99%,red 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+    background:linear-gradient(90deg,red,blue);  
+    border: none;
+  }
