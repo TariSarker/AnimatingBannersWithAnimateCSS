@@ -32,7 +32,10 @@ body {
     font-size: 40px;
     text-align: center;
     letter-spacing: 0.2em;
+    text-shadow: 1px 3px #bd4d4d;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow#:~:text=The%20text%2Dshadow%20CSS%20property,%2C%20blur%20radius%2C%20and%20color.n*/
 }
+
 
 .barbershopContainer {
     color: lightcoral;
@@ -63,12 +66,12 @@ body {
     --p: 25px;
     --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
     
-    height: 200px;
+    height: 90px;
   
     -webkit-mask:
-      radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))),blue 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
-      radial-gradient(var(--R) at 50% calc(100% + var(--p)),#0000 99%,red 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
-    background:linear-gradient(90deg,red,blue);  
+      radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), lightblue 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+      radial-gradient(var(--R) at 50% calc(100% + var(--p)),#0000 99%,lightblue 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+    background:linear-gradient(180deg, rgb(151, 202, 219), lightblue);  
     border: none;
   }
 
@@ -85,3 +88,12 @@ body {
     background:linear-gradient(90deg,red,blue);  
     border: none;
   }
+
+.barberBackground {
+    background: repeating-linear-gradient(to right, whitesmoke 5%, #e1e1e1 15%);
+    /* https://www.quackit.com/css/functions/css_repeating-linear-gradient_function.cfm */
+}
+
+.tiltedA {
+  transform: rotate(-270deg);
+}
